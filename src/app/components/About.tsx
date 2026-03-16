@@ -26,8 +26,8 @@ export function About() {
             </p>
             <p>
               {t(
-                'He trabajado con empresas, agencias y equipos multidisciplinarios en proyectos que van desde sitios corporativos hasta plataformas digitales complejas.',
-                'I have worked with businesses, agencies and multidisciplinary teams on projects ranging from corporate websites to complex digital platforms.'
+                'He trabajado con empresas, agencias y equipos multidisciplinarios en proyectos que van desde sitios corporativos hasta plataformas digitales complejas. Tengo amplia experiencia colaborando de forma remota con equipos internacionales.',
+                'I have worked with businesses, agencies and multidisciplinary teams on projects ranging from corporate websites to complex digital platforms. I have extensive experience collaborating remotely with international teams.'
               )}
             </p>
             <p>

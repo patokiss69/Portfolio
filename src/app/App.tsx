@@ -1,11 +1,13 @@
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
+import { WhatICanHelpWith } from './components/WhatICanHelpWith';
 import { TrustSection } from './components/TrustSection';
 import { ProjectsGrouped } from './components/ProjectsGrouped';
 import { BrandingGallery } from './components/BrandingGallery';
 import { SocialMediaGallery } from './components/SocialMediaGallery';
 import { AvailableForWork } from './components/AvailableForWork';
 import { HowIWork } from './components/HowIWork';
+import { AIWorkflow } from './components/AIWorkflow';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
@@ -34,12 +36,14 @@ export default function App() {
           onViewWork={() => scrollToSection('work')} 
           onContact={() => scrollToSection('contact')} 
         />
+        <WhatICanHelpWith />
         <TrustSection />
         <ProjectsGrouped />
         <BrandingGallery />
         <SocialMediaGallery />
         <AvailableForWork onContact={() => scrollToSection('contact')} />
         <HowIWork />
+        <AIWorkflow />
         <About />
         <Contact />
         <Footer />

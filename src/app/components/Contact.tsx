@@ -9,26 +9,36 @@ export function Contact() {
       <div className="max-w-[1440px] mx-auto">
         <div className="max-w-4xl mx-auto text-center space-y-12">
           <div className="space-y-6">
-            <h2 className="text-5xl lg:text-6xl font-semibold tracking-tight">
-              {t('Contacto', 'Contact')}
+            <h2 className="text-5xl lg:text-7xl font-semibold tracking-tight">
+              {t('Hablemos de tu proyecto', 'Let’s talk about your project')}
             </h2>
-            <p className="text-xl text-neutral-600 leading-relaxed">
+            <p className="text-xl lg:text-2xl text-neutral-600 leading-relaxed max-w-2xl mx-auto">
               {t(
-                'Disponible para oportunidades remotas en todo el mundo.',
-                'Open to remote opportunities worldwide.'
+                'Si necesitas un diseñador confiable para proyectos web, UX o digitales, no dudes en contactarme.',
+                'If you need a reliable designer for web, UX or digital work, feel free to reach out.'
               )}
             </p>
           </div>
 
-          <div className="space-y-8">
-            <div className="space-y-4">
+          <div className="space-y-12 pt-8">
+            <div className="inline-block">
               <a
-                href="mailto:patriciofunes@gmail.com"
-                className="inline-flex items-center gap-3 text-2xl font-medium text-neutral-900 hover:text-neutral-600 transition-colors"
+                href="mailto:patokiss2007@gmail.com"
+                className="group relative inline-flex items-center gap-4 text-3xl lg:text-5xl font-medium text-neutral-900 transition-all"
               >
-                <Mail className="w-6 h-6" />
-                patriciofunes@gmail.com
+                <div className="w-16 h-16 rounded-full bg-[var(--bs-naranja,#FF6400)]/10 text-[var(--bs-naranja,#FF6400)] flex items-center justify-center group-hover:bg-[var(--bs-naranja,#FF6400)] group-hover:text-white transition-colors duration-300">
+                   <Mail className="w-8 h-8" />
+                </div>
+                <span className="relative after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-[var(--bs-naranja,#FF6400)] after:transition-transform after:duration-300 group-hover:after:origin-bottom-left group-hover:after:scale-x-100">
+                  patokiss2007@gmail.com
+                </span>
               </a>
+              <p className="mt-6 text-sm text-neutral-500 font-medium">
+                {t(
+                  'Responde habitualmente dentro de 24–48 horas',
+                  'Typically responds within 24–48 hours'
+                )}
+              </p>
             </div>
 
             <div className="flex items-center justify-center gap-6 pt-4">

@@ -45,8 +45,8 @@ export function AvailableForWork({ onContact }: AvailableForWorkProps) {
             </h2>
             <p className="text-xl text-neutral-300 leading-relaxed">
               {t(
-                'Actualmente disponible para proyectos freelance o por contrato, de corto o largo plazo.',
-                'I am currently available for contract or freelance projects, short or long term.'
+                'Actualmente disponible para proyectos remotos en todo el mundo.',
+                'Currently available for remote projects worldwide.'
               )}
             </p>
           </div>

@@ -3,40 +3,53 @@ import { useLanguage } from '../hooks/useLanguage';
 import { ExternalLink } from 'lucide-react';
 
 export function ProjectsGrouped() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const highlightProject = {
-    title: 'FundsWin',
+    titleEs: 'FundsWin — Plataforma de gestión de financiación pública impulsada por IA',
+    titleEn: 'FundsWin — AI-Powered Public Funding Management Platform',
     url: 'https://fundswin.ai',
-    descriptionEs: 'Plataforma fintech que centraliza herramientas de análisis para instituciones públicas. Creé el sistema de diseño completo, estructuré patrones de interfaz reutilizables y diseñé flujos de usuario para facilitar el acceso a datos complejos de financiación.',
-    descriptionEn: 'Fintech platform that centralizes analysis tools for public institutions. Created the complete design system, structured reusable interface patterns and designed user flows to simplify access to complex funding data.',
+    descriptionEs: 'FundsWin es una plataforma SaaS especializada diseñada para gestionar subvenciones y licitaciones públicas dentro de un único sistema estructurado.\n\nCentraliza oportunidades, requisitos, documentación y flujos de trabajo, ayudando a las organizaciones a navegar procesos complejos de financiación pública con mayor claridad, coordinación y control.\n\nLa plataforma integra múltiples módulos para subvenciones, licitaciones y análisis documental, permitiendo a los equipos detectar oportunidades, analizar requisitos y coordinar la preparación desde un solo entorno.',
+    descriptionEn: 'FundsWin is a specialized SaaS platform designed to manage public grants and government tenders within a single structured system.\n\nIt centralizes opportunities, requirements, documentation and workflows, helping organizations navigate complex public funding processes with greater clarity, coordination and control.\n\nThe platform integrates multiple modules for grants, tenders and document analysis, allowing teams to detect opportunities, analyze requirements and coordinate preparation work from one environment.',
     category: t('Productos Digitales y Plataformas', 'Digital Products & Platforms'),
-    type: t('Diseño de Producto, Sistema de Diseño', 'Product Design, Design System'),
-    skills: 'UX/UI, Design Systems, Information Architecture',
-    contributions: t(
-      'Sistema de diseño escalable, arquitectura de información, patrones de interfaz',
-      'Scalable design system, information architecture, interface patterns'
-    ),
-    imageUrl: 'https://images.unsplash.com/photo-1726056652641-de93ec003289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW50ZWNoJTIwYXBwJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3Mjk4MzE4M3ww&ixlib=rb-4.1.0&q=80&w=1080'
+    type: t('Diseño de SaaS, Producto Digital', 'SaaS Design, Digital Product'),
+    skills: 'UX/UI, Design Systems, SaaS Architecture',
+    myRoleEs: 'Lideré el diseño UX/UI de la plataforma, definiendo la arquitectura de interfaz, los patrones de interacción y un sistema de diseño escalable para asegurar consistencia entre módulos.\n\nMi trabajo se centró en transformar procesos altamente burocráticos y basados en documentación en flujos de trabajo estructurados y fáciles de usar que reducen fricción y mejoran la eficiencia operativa.',
+    myRoleEn: 'I led the UX/UI design of the platform, defining the interface architecture, interaction patterns and a scalable design system to ensure consistency across modules.\n\nMy work focused on transforming highly bureaucratic and document-heavy processes into structured, user-friendly workflows that reduce friction and improve operational efficiency.',
+    aiIntegrationEs: 'Se integraron herramientas de IA a lo largo del flujo de trabajo para apoyar la investigación, la exploración de conceptos, la estructuración de contenidos y el prototipado rápido.\n\nEsto permitió iteraciones más ágiles, mayor exploración de soluciones y una colaboración más eficiente manteniendo principios de diseño centrados en el usuario.',
+    aiIntegrationEn: 'AI tools were integrated throughout the workflow to support research, concept exploration, content structuring and rapid prototyping.\n\nThis enabled faster iteration, broader solution testing and more efficient collaboration while maintaining human-centered design principles.',
+    capabilitiesEs: [
+      'Gestión centralizada de oportunidades, documentos y seguimiento',
+      'Flujos estructurados para procesos de financiación complejos',
+      'Coordinación de equipos, tareas y documentación',
+      'Módulos integrados para subvenciones, licitaciones y análisis documental',
+      'Mayor claridad y control en todo el proceso',
+    ],
+    capabilitiesEn: [
+      'Centralized management of opportunities, documents and tracking',
+      'Structured workflows for complex funding processes',
+      'Coordination of teams, tasks and documentation',
+      'Integrated modules for grants, tenders and document analysis',
+      'Improved clarity and control across the entire process',
+    ],
+    contributionsEs: [
+      'Diseño UX/UI y arquitectura de interfaz',
+      'Definición de sistema de diseño escalable',
+      'Flujos de interacción para procesos administrativos complejos',
+      'Colaboración con equipos multidisciplinarios',
+      'Flujos de diseño asistidos por IA',
+    ],
+    contributionsEn: [
+      'UX/UI design and interface architecture',
+      'Scalable design system definition',
+      'Interaction flows for complex administrative processes',
+      'Collaboration with multidisciplinary teams',
+      'AI-assisted design workflows',
+    ],
+    imageUrl: '/Portfolio/assets/fundswin-mockup.jpg'
   };
 
-  const digitalProducts = [
-    {
-      title: 'FundsWin',
-      description: t(
-        'Simplifiqué el acceso a datos financieros complejos mediante una arquitectura clara y patrones consistentes',
-        'Simplified access to complex financial data through clear architecture and consistent patterns'
-      ),
-      type: t('Diseño de Producto', 'Product Design'),
-      skills: 'UX/UI, Design Systems, Information Architecture',
-      contributions: t(
-        'Sistema de diseño escalable, flujos de usuario optimizados',
-        'Scalable design system, optimized user flows'
-      ),
-      imageUrl: 'https://images.unsplash.com/photo-1726056652641-de93ec003289?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW50ZWNoJTIwYXBwJTIwaW50ZXJmYWNlfGVufDF8fHx8MTc3Mjk4MzE4M3ww&ixlib=rb-4.1.0&q=80&w=1080',
-      url: 'https://fundswin.ai'
-    }
-  ];
+  const digitalProducts: any[] = [];
 
   const websites = [
     {
@@ -51,7 +64,8 @@ export function ProjectsGrouped() {
         'Jerarquía de contenido clara, navegación simplificada, diseño responsive',
         'Clear content hierarchy, simplified navigation, responsive design'
       ),
-      imageUrl: 'https://ezink.com/muestra/pf/pemf.jpg'
+      imageUrl: 'https://ezink.com/muestra/pf/pemf.jpg',
+      url: 'https://pemfcamati.com/'
     },
     {
       title: 'Santo Tomé al Día',
@@ -95,7 +109,8 @@ export function ProjectsGrouped() {
         'Arquitectura de servicios clara, jerarquía visual profesional, llamadas a acción efectivas',
         'Clear service architecture, professional visual hierarchy, effective calls to action'
       ),
-      imageUrl: 'https://ezink.com/muestra/pf/delta.jpg'
+      imageUrl: 'https://ezink.com/muestra/pf/delta.jpg',
+      url: 'https://grupodelta.com.ar/'
     },
     {
       title: 'Genacol',
@@ -123,7 +138,8 @@ export function ProjectsGrouped() {
         'Organización de ofertas turísticas, búsqueda simplificada, diseño responsive',
         'Tourism offer organization, simplified search, responsive design'
       ),
-      imageUrl: 'https://ezink.com/muestra/pf/gps.jpg'
+      imageUrl: 'https://ezink.com/muestra/pf/gps.jpg',
+      url: 'https://gpsturismo.com.ar/'
     }
   ];
 
@@ -148,26 +164,72 @@ export function ProjectsGrouped() {
                 <p className="text-sm uppercase tracking-wider text-neutral-400">
                   {t('Proyecto Destacado', 'Featured Project')}
                 </p>
-                <h3 className="text-4xl lg:text-5xl font-semibold mb-4">
-                  {highlightProject.title}
+                <h3 className="text-4xl lg:text-5xl font-semibold mb-4 leading-tight">
+                  {t(highlightProject.titleEs, highlightProject.titleEn)}
                 </h3>
-                <p className="text-lg text-neutral-300 leading-relaxed">
-                  {t(highlightProject.descriptionEs, highlightProject.descriptionEn)}
-                </p>
+                <div className="space-y-4 text-lg text-neutral-300 leading-relaxed font-light">
+                  {t(highlightProject.descriptionEs, highlightProject.descriptionEn).split('\n\n').map((para, i) => (
+                    <p key={i}>{para}</p>
+                  ))}
+                </div>
+                
+                <div className="pt-6 border-t border-white/10 space-y-4">
+                  <h4 className="text-sm uppercase tracking-wider text-neutral-400 font-semibold">
+                    {t('Mi rol', 'My Role')}
+                  </h4>
+                  <div className="text-base text-neutral-300 leading-relaxed space-y-3">
+                    {t(highlightProject.myRoleEs, highlightProject.myRoleEn).split('\n\n').map((para, i) => (
+                      <p key={i}>{para}</p>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="pt-6 border-t border-white/10 space-y-4">
+                  <h4 className="text-sm uppercase tracking-wider text-neutral-400 font-semibold">
+                    {t('Integración de IA en el proceso de diseño', 'AI Integration in the Design Process')}
+                  </h4>
+                  <div className="text-base text-neutral-300 leading-relaxed space-y-3">
+                    {t(highlightProject.aiIntegrationEs, highlightProject.aiIntegrationEn).split('\n\n').map((para, i) => (
+                      <p key={i}>{para}</p>
+                    ))}
+                  </div>
+                </div>
               </div>
 
-              <div className="space-y-4">
-                <div>
-                  <p className="text-sm text-neutral-400 mb-1">{t('Tipo de trabajo', 'Type of work')}</p>
-                  <p className="text-base">{highlightProject.type}</p>
+              <div className="space-y-6 pt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div>
+                    <p className="text-sm text-neutral-400 mb-2 uppercase tracking-wide">{t('Tipo de trabajo', 'Type of work')}</p>
+                    <p className="text-base text-white">{highlightProject.type}</p>
+                  </div>
+                  <div>
+                    <p className="text-sm text-neutral-400 mb-2 uppercase tracking-wide">{t('Habilidades clave', 'Key skills')}</p>
+                    <p className="text-base text-white">{highlightProject.skills}</p>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-neutral-400 mb-1">{t('Habilidades clave', 'Key skills')}</p>
-                  <p className="text-base">{highlightProject.skills}</p>
+                
+                <div className="pt-4 border-t border-white/10">
+                  <p className="text-sm text-neutral-400 mb-4 uppercase tracking-wide">{t('Capacidades clave de la plataforma', 'Key Platform Capabilities')}</p>
+                  <ul className="grid grid-cols-1 gap-y-3">
+                    {(language === 'es' ? highlightProject.capabilitiesEs : highlightProject.capabilitiesEn).map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-neutral-300">
+                        <span className="text-[var(--bs-magenta,#D81B60)] mt-1.5">•</span>
+                        <span className="text-base">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-                <div>
-                  <p className="text-sm text-neutral-400 mb-1">{t('Contribuciones', 'Contributions')}</p>
-                  <p className="text-base">{highlightProject.contributions}</p>
+
+                <div className="pt-4 border-t border-white/10">
+                  <p className="text-sm text-neutral-400 mb-4 uppercase tracking-wide">{t('Contribuciones clave', 'Key Contributions')}</p>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3">
+                    {(language === 'es' ? highlightProject.contributionsEs : highlightProject.contributionsEn).map((item) => (
+                      <li key={item} className="flex items-start gap-2 text-neutral-300">
+                        <span className="text-[var(--bs-magenta,#D81B60)] mt-1.5">•</span>
+                        <span className="text-base">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
@@ -187,7 +249,7 @@ export function ProjectsGrouped() {
             <div className="aspect-video lg:aspect-auto">
               <img
                 src={highlightProject.imageUrl}
-                alt={highlightProject.title}
+                alt={t(highlightProject.titleEs, highlightProject.titleEn)}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -195,25 +257,27 @@ export function ProjectsGrouped() {
         </div>
 
         {/* Digital Products & Platforms */}
-        <div className="space-y-12">
-          <h3 className="text-3xl lg:text-4xl font-semibold tracking-tight">
-            {t('Productos Digitales y Plataformas', 'Digital Products & Platforms')}
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {digitalProducts.map((project, index) => (
-              <ProjectCard
-                key={index}
-                title={project.title}
-                description={project.description}
-                type={project.type}
-                skills={project.skills}
-                contributions={project.contributions}
-                imageUrl={project.imageUrl}
-                url={project.url}
-              />
-            ))}
+        {digitalProducts.length > 0 && (
+          <div className="space-y-12">
+            <h3 className="text-3xl lg:text-4xl font-semibold tracking-tight">
+              {t('Productos Digitales y Plataformas', 'Digital Products & Platforms')}
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {digitalProducts.map((project, index) => (
+                <ProjectCard
+                  key={index}
+                  title={project.title}
+                  description={project.description}
+                  type={project.type}
+                  skills={project.skills}
+                  contributions={project.contributions}
+                  imageUrl={project.imageUrl}
+                  url={project.url}
+                />
+              ))}
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Websites & Marketing */}
         <div className="space-y-12">
@@ -233,6 +297,18 @@ export function ProjectsGrouped() {
                 url={project.url}
               />
             ))}
+          </div>
+          
+          <div className="pt-12 flex flex-col items-center">
+            <a
+              href="https://ezink.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-3 rounded-full border border-neutral-200 text-neutral-900 hover:bg-black hover:text-white hover:border-black transition-all duration-300 font-medium group flex items-center gap-2"
+            >
+              {t('Ver más trabajos', 'View more projects')}
+              <ExternalLink className="w-4 h-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </a>
           </div>
         </div>
       </div>

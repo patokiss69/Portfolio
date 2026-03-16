@@ -20,7 +20,7 @@ export function Hero({ onViewWork, onContact }: HeroProps) {
           <div className="lg:col-span-7">
             <div className="space-y-8">
               <div className="space-y-4">
-                <p className="text-sm uppercase tracking-wider text-neutral-500">
+                <p className="text-sm uppercase tracking-wider text-neutral-500 font-medium">
                   {t('Diseñador Senior UX/UI & Web', 'Senior UX/UI & Web Designer')}
                 </p>
                 <h1 className="text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight leading-none">
@@ -28,25 +28,28 @@ export function Hero({ onViewWork, onContact }: HeroProps) {
                 </h1>
                 <p className="text-xl lg:text-2xl text-neutral-600 max-w-2xl leading-relaxed">
                   {t(
-                    'Más de 20 años diseñando sitios web, productos digitales y experiencias de usuario para empresas de todo el mundo.',
-                    '20+ years of experience designing effective websites, digital products and user experiences for businesses worldwide.'
+                    'Ayudo a empresas a diseñar sitios web, productos digitales y experiencias de usuario efectivas para el mundo real.',
+                    'Helping businesses design effective websites, digital products and user experiences that work in the real world.'
+                  )}
+                </p>
+                <p className="text-sm lg:text-base text-neutral-500 max-w-xl leading-relaxed font-medium">
+                  {t(
+                    'Uso herramientas de IA para acelerar diseño, investigación y producción manteniendo resultados de alta calidad centrados en el usuario.',
+                    'Leveraging AI tools to accelerate design, research and production while maintaining high-quality human-centered results.'
                   )}
                 </p>
               </div>
 
-              <div className="space-y-6 max-w-2xl">
-                <p className="text-lg text-neutral-700 leading-relaxed">
-                  {t(
-                    'Disponible para trabajo remoto por contrato o freelance — desde landing pages hasta plataformas complejas.',
-                    'Available for remote contract and freelance work — from landing pages to complex platforms.'
-                  )}
-                </p>
-                <p className="text-sm text-neutral-500">
-                  {t(
-                    'Basado en Argentina — trabajo con clientes de todo el mundo',
-                    'Based in Argentina — working globally'
-                  )}
-                </p>
+              <div className="flex gap-4 items-center">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-100/80 rounded-full text-sm font-medium text-neutral-700">
+                  <span className="w-2 h-2 rounded-full bg-[var(--bs-success,#16a34a)] animate-pulse shadow-[0_0_8px_var(--bs-success,#16a34a)]"></span>
+                  <span>
+                    {t(
+                      'Actualmente disponible para proyectos remotos en todo el mundo.',
+                      'Currently available for remote projects worldwide.'
+                    )}
+                  </span>
+                </div>
               </div>
 
               <div className="flex flex-wrap gap-4 pt-4">
