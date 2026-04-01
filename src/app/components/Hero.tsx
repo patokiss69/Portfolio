@@ -10,6 +10,15 @@ interface HeroProps {
 export function Hero({ onViewWork, onContact }: HeroProps) {
   const { t } = useLanguage();
 
+  const scrollToFeatured = () => {
+    const element = document.getElementById('work');
+    if (element) {
+      const offset = 80;
+      const top = element.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }
+  };
+
   return (
     <section
       id="home"
@@ -20,51 +29,39 @@ export function Hero({ onViewWork, onContact }: HeroProps) {
           <div className="lg:col-span-7">
             <div className="space-y-8">
               <div className="space-y-4">
-                <p className="text-sm uppercase tracking-wider text-neutral-500 font-medium">
-                  {t('Diseñador Senior UX/UI & Web', 'Senior UX/UI & Web Designer')}
-                </p>
-                <h1 className="text-6xl lg:text-7xl xl:text-8xl font-semibold tracking-tight leading-none">
+                <p className="text-xl lg:text-2xl font-medium text-neutral-900">
                   Patricio Funes
+                </p>
+                <h1 className="text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight leading-none">
+                  {t('UX/UI Lead & Diseñador de Producto', 'UX/UI Lead & Product Designer')}
                 </h1>
                 <p className="text-xl lg:text-2xl text-neutral-600 max-w-2xl leading-relaxed">
                   {t(
-                    'Ayudo a empresas a diseñar sitios web, productos digitales y experiencias de usuario efectivas para el mundo real.',
-                    'Helping businesses design effective websites, digital products and user experiences that work in the real world.'
+                    'Diseño experiencias digitales escalables, sistemas de diseño y workflows con IA para productos y plataformas digitales.',
+                    'I design scalable digital experiences, design systems, and AI-driven workflows for digital products and platforms.'
                   )}
                 </p>
-                <p className="text-sm lg:text-base text-neutral-500 max-w-xl leading-relaxed font-medium">
+                <p className="text-base text-neutral-500 max-w-xl leading-relaxed">
                   {t(
-                    'Uso herramientas de IA para acelerar diseño, investigación y producción manteniendo resultados de alta calidad centrados en el usuario.',
-                    'Leveraging AI tools to accelerate design, research and production while maintaining high-quality human-centered results.'
+                    'Más de 20 años de experiencia evolucionando desde el diseño visual hacia el diseño de producto, enfocado en estructurar experiencias, simplificar procesos y crear soluciones consistentes y funcionales.',
+                    '20+ years of experience evolving from visual design into product design, focused on structuring user experiences, simplifying workflows, and building consistent, functional solutions.'
                   )}
                 </p>
-              </div>
-
-              <div className="flex gap-4 items-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-100/80 rounded-full text-sm font-medium text-neutral-700">
-                  <span className="w-2 h-2 rounded-full bg-[var(--bs-success,#16a34a)] animate-pulse shadow-[0_0_8px_var(--bs-success,#16a34a)]"></span>
-                  <span>
-                    {t(
-                      'Actualmente disponible para proyectos remotos en todo el mundo.',
-                      'Currently available for remote projects worldwide.'
-                    )}
-                  </span>
-                </div>
               </div>
 
               <div className="flex flex-wrap gap-4 pt-4">
                 <button
-                  onClick={onViewWork}
+                  onClick={scrollToFeatured}
                   className="px-8 py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-all inline-flex items-center gap-2 group"
                 >
-                  {t('Ver proyectos', 'View Projects')}
+                  {t('Ver caso destacado', 'View Featured Case')}
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </button>
                 <button
-                  onClick={onContact}
+                  onClick={onViewWork}
                   className="px-8 py-4 border-2 border-neutral-900 text-neutral-900 rounded-full hover:bg-neutral-900 hover:text-white transition-all"
                 >
-                  {t('Contactar', 'Contact Me')}
+                  {t('Ver proyectos', 'View Projects')}
                 </button>
               </div>
             </div>

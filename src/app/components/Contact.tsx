@@ -1,4 +1,4 @@
-import { Mail, Linkedin, ExternalLink } from 'lucide-react';
+import { Mail, Linkedin, ExternalLink, ArrowRight } from 'lucide-react';
 import { useLanguage } from '../hooks/useLanguage';
 
 export function Contact() {
@@ -7,59 +7,74 @@ export function Contact() {
   return (
     <section id="contact" className="py-32 px-8 lg:px-16">
       <div className="max-w-[1440px] mx-auto">
-        <div className="max-w-4xl mx-auto text-center space-y-12">
+        <div className="max-w-3xl mx-auto space-y-16">
+
+          {/* Closing statement */}
           <div className="space-y-6">
-            <h2 className="text-5xl lg:text-7xl font-semibold tracking-tight">
-              {t('Hablemos de tu proyecto', 'Let’s talk about your project')}
-            </h2>
-            <p className="text-xl lg:text-2xl text-neutral-600 leading-relaxed max-w-2xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight leading-tight">
               {t(
-                'Si necesitas un diseñador confiable para proyectos web, UX o digitales, no dudes en contactarme.',
-                'If you need a reliable designer for web, UX or digital work, feel free to reach out.'
+                'Construyamos mejores experiencias digitales.',
+                "Let's build better digital experiences."
+              )}
+            </h2>
+            <p className="text-base lg:text-lg text-neutral-500 leading-relaxed max-w-xl">
+              {t(
+                'Disponible para UX/UI, diseño de producto, sistemas de diseño y workflows digitales con IA.',
+                "I'm available for UX/UI, product design, design systems, and AI-enhanced digital workflows."
               )}
             </p>
           </div>
 
-          <div className="space-y-12 pt-8">
-            <div className="inline-block">
+          {/* Primary CTA */}
+          <div className="space-y-8">
+            <a
+              href="mailto:patokiss2007@gmail.com"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-all group text-base font-medium"
+            >
+              {t('Contactar', 'Get in Touch')}
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+
+            <div className="flex items-center gap-2 pt-2">
               <a
                 href="mailto:patokiss2007@gmail.com"
-                className="group relative inline-flex items-center gap-4 text-3xl lg:text-5xl font-medium text-neutral-900 transition-all"
+                className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-neutral-900 transition-colors"
               >
-                <div className="w-16 h-16 rounded-full bg-[var(--bs-naranja,#FF6400)]/10 text-[var(--bs-naranja,#FF6400)] flex items-center justify-center group-hover:bg-[var(--bs-naranja,#FF6400)] group-hover:text-white transition-colors duration-300">
-                   <Mail className="w-8 h-8" />
-                </div>
-                <span className="relative after:absolute after:bottom-0 after:left-0 after:h-1 after:w-full after:origin-bottom-right after:scale-x-0 after:bg-[var(--bs-naranja,#FF6400)] after:transition-transform after:duration-300 group-hover:after:origin-bottom-left group-hover:after:scale-x-100">
-                  patokiss2007@gmail.com
-                </span>
+                <Mail className="w-4 h-4" />
+                patokiss2007@gmail.com
               </a>
-              <p className="mt-6 text-sm text-neutral-500 font-medium">
-                {t(
-                  'Responde habitualmente dentro de 24–48 horas',
-                  'Typically responds within 24–48 hours'
-                )}
-              </p>
             </div>
 
-            <div className="flex items-center justify-center gap-6 pt-4">
-              <a
-                href="https://linkedin.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border-2 border-neutral-900 flex items-center justify-center hover:bg-neutral-900 hover:text-white transition-all"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="https://behance.net"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full border-2 border-neutral-900 flex items-center justify-center hover:bg-neutral-900 hover:text-white transition-all"
-              >
-                <ExternalLink className="w-5 h-5" />
-              </a>
-            </div>
+            <p className="text-xs text-neutral-400">
+              {t(
+                'Responde habitualmente dentro de 24–48 horas.',
+                'Typically responds within 24–48 hours.'
+              )}
+            </p>
           </div>
+
+          {/* Social links */}
+          <div className="flex items-center gap-4 pt-4 border-t border-neutral-100">
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all"
+              aria-label="LinkedIn"
+            >
+              <Linkedin className="w-4 h-4" />
+            </a>
+            <a
+              href="https://behance.net"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-10 h-10 rounded-full border border-neutral-200 flex items-center justify-center hover:bg-neutral-900 hover:text-white hover:border-neutral-900 transition-all"
+              aria-label="Behance"
+            >
+              <ExternalLink className="w-4 h-4" />
+            </a>
+          </div>
+
         </div>
       </div>
     </section>

@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { WhatICanHelpWith } from './components/WhatICanHelpWith';
@@ -11,9 +12,12 @@ import { AIWorkflow } from './components/AIWorkflow';
 import { About } from './components/About';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { FundsWinCaseStudy } from './components/FundsWinCaseStudy';
 import { LanguageProvider } from './hooks/useLanguage';
 
 export default function App() {
+  const [caseStudyOpen, setCaseStudyOpen] = useState(false);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -32,13 +36,13 @@ export default function App() {
     <LanguageProvider>
       <div className="min-h-screen bg-white">
         <Navigation />
-        <Hero 
-          onViewWork={() => scrollToSection('work')} 
-          onContact={() => scrollToSection('contact')} 
+        <Hero
+          onViewWork={() => scrollToSection('work')}
+          onContact={() => scrollToSection('contact')}
         />
         <WhatICanHelpWith />
         <TrustSection />
-        <ProjectsGrouped />
+        <ProjectsGrouped onOpenCaseStudy={() => setCaseStudyOpen(true)} />
         <BrandingGallery />
         <SocialMediaGallery />
         <AvailableForWork onContact={() => scrollToSection('contact')} />
@@ -47,6 +51,10 @@ export default function App() {
         <About />
         <Contact />
         <Footer />
+
+        {caseStudyOpen && (
+          <FundsWinCaseStudy onClose={() => setCaseStudyOpen(false)} />
+        )}
       </div>
     </LanguageProvider>
   );

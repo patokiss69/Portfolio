@@ -101,7 +101,7 @@ export function ProjectCard({
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-[var(--bs-magenta,#D81B60)] hover:text-black transition-colors font-semibold pt-2 border-b border-transparent hover:border-[var(--bs-magenta,#D81B60)]"
             >
-              {t('Ver sitio', 'Visit site')}
+              {t('Ver sitio', 'View Site')}
               <ExternalLink className="w-4 h-4" />
             </a>
           )}
